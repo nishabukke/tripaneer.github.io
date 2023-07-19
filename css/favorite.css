@@ -1,0 +1,142 @@
+.favorite-container{
+    background-color: #fff;
+    width: 67%;
+    border-radius: 6px;
+    border: 1px solid #D9D9D9;
+    background: #fff;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.15);
+    transition: box-shadow .2s ease-in-out;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.gallery-photo{
+    width: 35%;
+}
+
+.card-content{
+    width: 65%;
+    padding: 24px 24px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cardSection{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.carousel-control-prev, .carousel-control-next{
+    display: none;
+}
+
+.carousel:hover .carousel-control-prev,.carousel:hover .carousel-control-next {
+    display: block;
+    transition: 0.5s;
+}
+
+.carousel-control-next{
+    right: 0;
+    background: linear-gradient(to right,rgba(0,0,0,0) 0,rgba(32,34,36,.5) 100%);
+    border-radius: 0;
+}
+
+.carousel-control-prev{
+    left: 0;
+    background: linear-gradient(to left,rgba(0,0,0,0) 0,rgba(32,34,36,.5) 100%);
+    border-radius: 5px 0 0 5px;
+}
+
+.card-heading h6{
+    font-size: 12px;
+    font-weight: 700;
+    color: #7C8086;
+}
+
+.card-desc{
+    font-size: 18px;
+    font-weight: 700;
+    color: #202224;
+    margin-right: 12%;
+    line-height: 25px;
+}
+
+.view{
+    color: #7C8086;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.interest a > span{
+    color: #abaeb1;
+}
+
+.fa-eye{
+    margin-right: 3px;
+    font-size: 12px;
+}
+
+.complimentary{
+    font-size: 15px;
+    color: #515355;
+}
+
+.users span, .calender span{
+    font-size: 13px;
+    color: #515355;
+}
+
+.users i{
+    font-size: 12px;
+    margin-right: 8px;
+}
+
+.calender i{
+    margin-right: 8px;
+}
+
+.from-txt{
+    font-size: 13px;
+    color: #7c8086;
+}
+
+.price-tag{
+    font-size: 24px;
+    color: #202224;
+    padding-left: 4px;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+    .favorite-container {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .cardSection {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .gallery-photo {
+        width: 100%;
+    }
+
+    .card-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .card-footer {
+        flex-direction: column !important;
+    align-items: start !important;
+    }
+
+    .price {
+        margin-top: 20px;
+    }
+}

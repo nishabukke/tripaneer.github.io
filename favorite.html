@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/favorite.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main-container" id="mainC">
+        <div class="container-fluid bg-white">
+            <div class="header d-flex justify-content-between px-5 align-items-center">
+                <div class="left-header">
+                    <div class="logo">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="32px" class="logo" viewBox="0 0 380 90">
+                                <title>Tripaneer logo</title>
+                                <g fill-rule="nonzero" fill="#02C69E">
+                                    <path
+                                        d="M292.56 36.799c-.913-6.583-3.55-11.225-7.9-14.006a21.555 21.555 0 0 0-11.802-3.104 35.615 35.615 0 0 0-5.013.374c-6.798 1.011-11.851 3.62-15.23 7.979a18.942 18.942 0 0 0-4.101 11.932c0 1.08.074 2.157.22 3.226l1.825 13.085c.873 6.32 3.33 11.013 7.38 14.158 3.001 2.332 7.012 3.502 12.031 3.509a38.936 38.936 0 0 0 5.445-.405c6.196-.883 11.009-3.047 14.438-6.492a13.83 13.83 0 0 0 4.291-10.112 17.122 17.122 0 0 0-.17-2.346 1.014 1.014 0 0 0-.331-.678 1.355 1.355 0 0 0-.822-.222 2.406 2.406 0 0 0-.452 0l-10.367 1.456a2.18 2.18 0 0 0-1.734 1.466c-1.123 2.589-3.39 4.126-6.668 4.581a12.25 12.25 0 0 1-1.875.142 7.71 7.71 0 0 1-4.442-1.224 6.266 6.266 0 0 1-2.807-4.5l-.12-.82a6.374 6.374 0 0 1 0-.737 2.695 2.695 0 0 1 .581-1.8 2.688 2.688 0 0 1 1.715-.82l22.108-3.084a5.006 5.006 0 0 0 3.58-2.133 5.554 5.554 0 0 0 1.002-3.246 8.709 8.709 0 0 0-.07-1.012l-.712-5.167zm-14.488 4.288a2.798 2.798 0 0 1-1.785.849l-10.869 1.547a3.211 3.211 0 0 1-.53 0 2.225 2.225 0 0 1-1.655-.637 3.26 3.26 0 0 1-.762-1.83 6.955 6.955 0 0 1-.07-1.012 7.277 7.277 0 0 1 1.724-4.61 8.323 8.323 0 0 1 5.495-3.034c.528-.071 1.06-.108 1.594-.112a7.97 7.97 0 0 1 4.421 1.244 6.693 6.693 0 0 1 3.008 4.996c.04.25.06.504.06.758a2.776 2.776 0 0 1-.631 1.84zM191.313 35.808c0-5.805-1.925-10.112-5.755-12.974s-9.635-4.349-17.405-4.349c-3.731.012-7.443.543-11.03 1.578a18.1 18.1 0 0 0-8.281 4.49 1.21 1.21 0 0 0-.24.88c.01.22.071.435.18.627l4.19 8.453c.17.306.485.501.833.516.327-.007.646-.105.922-.283a16.833 16.833 0 0 1 5.525-2.457 24.551 24.551 0 0 1 6.567-1.011 23.87 23.87 0 0 1 7.44.91 4.17 4.17 0 0 1 2.085 1.456 4.07 4.07 0 0 1 .702 2.437 3.36 3.36 0 0 1-1.895 2.963c-.988.514-2.035.901-3.118 1.153-1.558.445-3.64.943-6.247 1.496l-5.454 1.153a23.074 23.074 0 0 0-4.943 1.81 15.809 15.809 0 0 0-4.492 3.125 14.686 14.686 0 0 0-2.888 4.793 19.056 19.056 0 0 0-1.193 7.008 12.822 12.822 0 0 0 2.838 8.414 15.187 15.187 0 0 0 6.557 4.813 24.137 24.137 0 0 0 8.162 1.355c5.915 0 10.507-1.224 13.806-3.65a3.244 3.244 0 0 1 1.614-.678c.375-.01.738.136 1.003.404.254.316.38.717.35 1.123-.03.313.084.624.312.84.29.211.645.311 1.002.282h7.35c.396.064.798-.068 1.082-.354a1.27 1.27 0 0 0 .351-1.092l.07-35.231zm-14.307 17.788c0 3.458-.903 5.935-2.778 7.361a10.308 10.308 0 0 1-6.396 2.083 7.108 7.108 0 0 1-4.402-1.446 4.89 4.89 0 0 1-1.935-4.156 6.806 6.806 0 0 1 .541-2.841c.371-.79.973-1.447 1.725-1.881a10.405 10.405 0 0 1 2.005-.92l2.306-.708 7.019-1.69h.05a1.786 1.786 0 0 1 1.394.537c.333.439.497.985.46 1.537l.01 2.124zM340.797 53.393a.812.812 0 0 0-.301-.718 1.723 1.723 0 0 0-1.003-.253h-9.725a2.004 2.004 0 0 0-1.755 1.113c-1.363 2.225-3.64 3.347-6.697 3.337a8.115 8.115 0 0 1-5.665-1.82 5.867 5.867 0 0 1-2.006-4.5v-.759a3.052 3.052 0 0 1 .632-2.083 2.375 2.375 0 0 1 1.875-.728h20.735a4.603 4.603 0 0 0 3.559-1.476 5.325 5.325 0 0 0 1.394-3.762V36.9c0-6.138-1.835-10.73-5.465-13.834-3.63-3.104-8.643-4.682-15.04-4.682-6.396 0-11.34 1.84-14.979 5.34a17.895 17.895 0 0 0-5.474 13.368v12.226c0 5.895 1.664 10.517 5.013 13.904 3.349 3.388 8.452 5.057 15.56 5.057 5.796 0 10.475-1.349 14.038-4.045a12.9 12.9 0 0 0 5.304-10.84zm-24.825-21.458a7.654 7.654 0 0 1 5.434-2.114 7.977 7.977 0 0 1 5.384 1.82 6.275 6.275 0 0 1 2.106 4.976 3.184 3.184 0 0 1-.652 2.164c-.51.522-1.22.795-1.945.748h-10.157c-.67.047-1.328-.2-1.805-.677a2.807 2.807 0 0 1-.611-1.952 6.638 6.638 0 0 1 2.246-4.965zM377.804 29.184c.31.02.615-.081.852-.283.217-.257.338-.583.341-.92l.873-10.79v-.233a1.129 1.129 0 0 0-.29-.921 1.108 1.108 0 0 0-.893-.353 33.457 33.457 0 0 0-2.838-.121 32.846 32.846 0 0 0-13.134 2.73c-.3.204-.644.329-1.003.364h-.06a1.576 1.576 0 0 1-.933-.333 1.015 1.015 0 0 1-.35-.83v-.667a.812.812 0 0 0-.271-.667 1.714 1.714 0 0 0-.943-.304l-6.958-.566h-.23a1.286 1.286 0 0 0-.913.283c-.223.25-.348.574-.351.91l-3.79 48.175v.213a1.26 1.26 0 0 0 .3.92c.279.244.635.377 1.003.374l11.16.91h.22c.332.024.66-.085.913-.303.241-.28.373-.64.37-1.011l2.267-28.194c.23-2.902 1.082-5.116 2.596-6.603a8.637 8.637 0 0 1 6.357-2.225c.441 0 .903 0 1.374.061l4.2.344h.201l-.07.04zM227.81 64.82l10.718.455h.1c.338.028.674-.082.932-.303.237-.28.356-.644.331-1.011l1.254-30.155v-1.598c0-5.886-1.424-10.305-4.232-13.328-2.807-3.024-7.018-4.662-12.753-4.905h-1.003c-3.632-.057-7.195 1.001-10.217 3.034a2.994 2.994 0 0 1-1.604.667 1.287 1.287 0 0 1-1.002-.384 1.434 1.434 0 0 1-.321-1.011v-.192a.884.884 0 0 0-.271-.728 1.475 1.475 0 0 0-.912-.283l-6.688-.284h-.12a1.276 1.276 0 0 0-.923.294 1.22 1.22 0 0 0-.33.89l-1.916 46.314v.111c-.027.342.081.68.301.94.279.24.638.36 1.003.335l10.718.455h.11c.339.03.676-.08.933-.304.24-.279.362-.642.34-1.011l1.304-29.933a7.485 7.485 0 0 1 2.106-5.056 6.725 6.725 0 0 1 5.013-1.9h.481a6.265 6.265 0 0 1 5.154 2.386l-.201.141.2-.141a8.2 8.2 0 0 1 1.474 4.904v.475l-1.193 29.74v.112c-.026.343.086.682.311.94.253.215.572.334.902.334zM80.803 72.627l10.247.303h.07c.328.03.653-.076.902-.293.218-.258.33-.591.311-.93l1.273-44.16v-.082a1.22 1.22 0 0 0-.29-.9 1.287 1.287 0 0 0-.923-.323l-10.337-.304h-.07a1.107 1.107 0 0 0-.832.273 1.271 1.271 0 0 0-.291.87l-1.274 44.252v.07c-.028.33.077.659.291.91.257.22.587.332.923.314zM73.714 20.457a1.363 1.363 0 0 0-.29-1.01 1.127 1.127 0 0 0-.873-.294 30.134 30.134 0 0 0-14.398 3.61c-.29.228-.637.372-1.003.415a1.425 1.425 0 0 1-.932-.274 1.015 1.015 0 0 1-.351-.839v-.374a.772.772 0 0 0-.26-.657 1.405 1.405 0 0 0-.903-.233h-6.387a1.336 1.336 0 0 0-1.002.293 1.149 1.149 0 0 0-.291.88v44.272c-.033.348.076.695.3.96.28.235.642.345 1.003.304h10.237c.362.043.725-.066 1.003-.303.225-.266.333-.613.3-.96V40.357c0-2.882.732-5.056 2.216-6.573 1.484-1.516 3.7-2.204 6.588-2.204h3.86c.32.027.637-.075.882-.283.204-.25.304-.568.28-.89l.021-9.95zM87.961 3.731h-.26a7.185 7.185 0 0 0-5.164 2.023 7.401 7.401 0 0 0-2.326 5.37v.263a7.193 7.193 0 0 0 2.005 5.167l-.18.172.19-.172a7.31 7.31 0 0 0 5.304 2.306h.271a7.256 7.256 0 0 0 5.24-2.078 7.382 7.382 0 0 0 2.21-5.224v-.262a7.356 7.356 0 0 0-2.006-5.208 7.151 7.151 0 0 0-5.284-2.357zM111.634 89.04c.299.033.597-.071.812-.284.21-.262.317-.593.3-.93l.803-19.992c-.006-.416.109-.823.33-1.173.225-.3.582-.467.953-.445h.07c.087.012.17.036.251.07l.32.162a14.403 14.403 0 0 0 6.498 1.76h1.344c5.584 0 10.026-1.477 13.375-4.399 3.61-3.155 5.544-7.605 5.775-13.43l.521-13.064v-1.012a17.051 17.051 0 0 0-4.622-12.347c-3.319-3.438-7.96-5.278-14.037-5.531h-.742a16.14 16.14 0 0 0-9.665 3.145 1.894 1.894 0 0 1-1.133.384h-.08a1.238 1.238 0 0 1-.913-.374 1.383 1.383 0 0 1-.31-1.011V20.427a.864.864 0 0 0-.251-.688 1.465 1.465 0 0 0-.873-.263l-6.386-.263h-.1c-.322-.026-.64.08-.883.294-.218.254-.33.584-.31.92l-2.668 66.883v.091c-.028.326.081.65.301.89.282.232.639.351 1.003.334l10.237.414h.09-.01zm2.667-41.006l.39-9.85c0-2.238.77-4.407 2.177-6.138a6.928 6.928 0 0 1 5.534-2.235h.491a6.835 6.835 0 0 1 5.645 2.65 9.555 9.555 0 0 1 1.604 5.652v.597l-.39 9.85a9.505 9.505 0 0 1-2.176 6.148 7.066 7.066 0 0 1-5.505 2.134h-.511c-2.557-.102-4.472-.961-5.645-2.61a9.29 9.29 0 0 1-1.614-5.602v-.596zM40.807 76.106c.262-.268.397-.637.371-1.012v-.172l-.701-11.346a1.82 1.82 0 0 0-.412-1.193 1.327 1.327 0 0 0-1.002-.364H37.95a8.598 8.598 0 0 1-7.019-2.973c-1.644-2.022-2.566-4.904-2.797-8.767l-1.133-18.03v-.274a2.328 2.328 0 0 1 .602-1.729 2.555 2.555 0 0 1 1.754-.688l7.82-.495c.46.011.907-.16 1.244-.475a1.8 1.8 0 0 0 .401-1.275v-.242l-.621-9.88a1.738 1.738 0 0 0-.432-1.173c-.3-.273-.7-.409-1.103-.374h-.2l-7.82.495h-.281a2.484 2.484 0 0 1-1.805-.637 2.815 2.815 0 0 1-.702-1.86l-.792-12.327a.904.904 0 0 0-.25-.658.997.997 0 0 0-.703-.212h-.15l-14.087.89a1.186 1.186 0 0 0-.762.253.823.823 0 0 0-.22.637v.1l.761 12.308v.303a2.532 2.532 0 0 1-.601 1.8 2.525 2.525 0 0 1-1.765.708l-5.284.334c-.43-.005-.847.15-1.173.434a1.535 1.535 0 0 0-.36 1.113v.202l.63 10.112c-.008.434.15.855.442 1.173.335.268.757.401 1.183.375h.22l5.074-.294h.3c.652-.04 1.292.178 1.786.607a2.59 2.59 0 0 1 .701 1.78l1.264 20.427c.521 8.312 3.218 14.278 8.091 17.99 4.305 3.276 9.846 4.918 16.624 4.924.912 0 1.865 0 2.827-.09v.262-.263c.436.01.86-.141 1.193-.424z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="nav-left-links">
+                        <button class="tablinks"
+                            onmouseover="openTopic(event, 'destinationSubMenu','afme','africaMiddleEast')">Destinations</button>
+                        <button class="tablinks"
+                            onmouseover="openTopic(event, 'healthWellnessSubMenu','hw','healthWellness')">Health &
+                            Wellness</button>
+                        <button class="tablinks"
+                            onmouseover="openTopic(event, 'onlineExpSubMenu','onof','onlineOffering')">Online
+                            Experiences</button>
+                    </div>
+                </div>
+                <div class="right-header">
+                    <div class="nav-right-links">
+                        <a href="favorite.html" target="_blank"><i class="fa-regular fa-heart"></i></a>
+                        <button>Sign up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="destinationSubMenu" class="mainContent tabcontent">
+            <div class="container-fluid no-box-shadow h-100">
+                <div class="row h-100 overflow-hidden">
+                    <div class="col-3 continent-menu d-flex flex-column" id="continentNestedSubMenu">
+                        <div class="nestSub-title text-uppercase mb-3 ps-3">By Continents</div>
+                        <button class="subTabLinks active defaultActive"
+                            onmouseover="openSubTopic(event, 'africaMiddleEast')" id="afme">Africa & the Middle
+                            East</button>
+                        <button class="subTabLinks" onmouseover="openSubTopic(event, 'asiaOceania')">Asia &
+                            Oceania</button>
+                        <button class="subTabLinks" onmouseover="openSubTopic(event, 'europe')">Europe</button>
+                        <button class="subTabLinks" onmouseover="openSubTopic(event, 'americasCaribbean')">The Americas
+                            & Caribbean</button>
+                    </div>
+                    <div class="col-5">
+                        <div id="africaMiddleEast" class="nestedSubcontinent-menu ps-3 subtabcontent defaultShow">
+                            <div class="nestSubInner-title text-uppercase mb-3">Countries in Africa & the Middle East
+                            </div>
+                            <div class="innerSubMenu d-grid">
+                                <a href="#">Egypt</a>
+                                <a href="#">Mauritius</a>
+                                <a href="#">Ethiopia</a>
+                                <a href="#">Morocco<span class="popular">Popular</span></a>
+                                <a href="#">Israel</a>
+                                <a href="#">Mozambique</a>
+                                <a href="#">Jordan<span class="popular">Popular</span></a>
+                                <a href="#">Namibia</a>
+                                <a href="#">Kenya</a>
+                                <a href="#">South Africa</a>
+                                <a href="#">Lebanon</a>
+                                <a href="#">Tanzania</a>
+                                <a href="#">Madagascar</a>
+                                <a href="#">Turkey<span class="popular">Popular</span></a>
+                            </div>
+                        </div>
+                        <div id="asiaOceania" class="nestedSubcontinent-menu ps-3 subtabcontent">
+                            <div class="nestSubInner-title text-uppercase mb-3">Countries in ASIA & OCEANIA</div>
+                            <div class="innerSubMenu d-grid grid-3">
+                                <a href="#">Australia</a>
+                                <a href="#">Indonesia<span class="popular">Popular</span></a>
+                                <a href="#">New Zealand</a>
+                                <a href="#">Cambodia<span class="popular">Popular</span></a>
+                                <a href="#">Japan</a>
+                                <a href="#">Philippines</a>
+                                <a href="#">China</a>
+                                <a href="#">Kyrgystan</a>
+                                <a href="#">Sri Lanka</a>
+                                <a href="#">Fiji</a>
+                                <a href="#">Malaysia</a>
+                                <a href="#">Taiwan</a>
+                                <a href="#">Georgia</a>
+                                <a href="#">Maldives</a>
+                                <a href="#">Thailand<span class="popular">Popular</span></a>
+                                <a href="#">Hong Kong</a>
+                                <a href="#">Mongolia</a>
+                                <a href="#">Vietnam</a>
+                                <a href="#">India<span class="popular">Popular</span></a>
+                                <a href="#">Nepal<span class="popular">Popular</span></a>
+                            </div>
+                        </div>
+                        <div id="europe" class="nestedSubcontinent-menu ps-3 subtabcontent">
+                            <div class="nestSubInner-title text-uppercase mb-3">Countries in Europe</div>
+                            <div class="innerSubMenu d-grid grid-3">
+                                <a href="#">Austria</a>
+                                <a href="#">Hungary</a>
+                                <a href="#">Portugal<span class="popular">Popular</span></a>
+                                <a href="#">Belgium</a>
+                                <a href="#">Iceland</a>
+                                <a href="#">Romania</a>
+                                <a href="#">Bosnia Herzegovina</a>
+                                <a href="#">Ireland<span class="popular">Popular</span></a>
+                                <a href="#">Serbia</a>
+                                <a href="#">Bulgaria</a>
+                                <a href="#">Italy<span class="popular">Popular</span></a>
+                                <a href="#">Slovenia</a>
+                                <a href="#">Cyprus</a>
+                                <a href="#">Luxembourg</a>
+                                <a href="#">Spain<span class="popular">Popular</span></a>
+                                <a href="#">Czech Republic</a>
+                                <a href="#">Malta</a>
+                                <a href="#">Sweden</a>
+                                <a href="#">Estonia</a>
+                                <a href="#">Montenegro</a>
+                                <a href="#">Switzerland</a>
+                                <a href="#">France<span class="popular">Popular</span></a>
+                                <a href="#">Netherlands</a>
+                                <a href="#">United Kingdom<span class="popular">Popular</span></a>
+                                <a href="#">Germany</a>
+                                <a href="#">Norway</a>
+                                <a href="#"></a>
+                                <a href="#">Greece<span class="popular">Popular</span></a>
+                                <a href="#">Poland</a>
+                            </div>
+                        </div>
+                        <div id="americasCaribbean" class="nestedSubcontinent-menu ps-3 subtabcontent">
+                            <div class="nestSubInner-title text-uppercase mb-3">Countries in the Americas & Caribbean
+                            </div>
+                            <div class="innerSubMenu d-grid grid-3">
+                                <a href="#">Anguilla</a>
+                                <a href="#">Costa Rica<span class="popular">Popular</span></a>
+                                <a href="#">Nicaragua</a>
+                                <a href="#">Argentina</a>
+                                <a href="#">Dominican Republic</a>
+                                <a href="#">Panama</a>
+                                <a href="#">Aruba</a>
+                                <a href="#">Ecuador</a>
+                                <a href="#">Peru<span class="popular">Popular</span></a>
+                                <a href="#">Brazil</a>
+                                <a href="#">Guatemala</a>
+                                <a href="#">Puerto Rico</a>
+                                <a href="#">Canada</a>
+                                <a href="#">Jamaica</a>
+                                <a href="#">Sint Maarten</a>
+                                <a href="#">Colombia</a>
+                                <a href="#">Mexico<span class="popular">Popular</span></a>
+                                <a href="#">USA<span class="popular">Popular</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 dest-bg">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 31 700">
+                            <path fill-rule="evenodd"
+                                d="M0 0h31C14 116.014169 5.5 232.419836 5.5 349.217002 5.5 466.014168 14 582.941834 31 700H0V0z"
+                                fill="#FFF"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="healthWellnessSubMenu" class="mainContent tabcontent">
+            <div class="container-fluid no-box-shadow h-100">
+                <div class="row h-100 overflow-hidden">
+                    <div class="col-3 continent-menu d-flex flex-column" id="continentNestedSubMenu">
+                        <div class="nestSub-title text-uppercase mb-3 ps-3">Retreats</div>
+                        <button class="subTabLinks active " onmouseover="openSubTopic(event, 'healthWellness')"
+                            id="hw">Health & Wellness Retreats</button>
+                        <button class="subTabLinks" onmouseover="openSubTopic(event, 'culinaryHolidays')">Culinary
+                            Holidays</button>
+                        <button class="subTabLinks" onmouseover="openSubTopic(event, 'martialArts')">The Martial Arts
+                            Camps</button>
+                    </div>
+                    <div class="col-5">
+                        <div id="healthWellness"
+                            class="nestedSubcontinent-menu ps-3 subtabcontent defaultShow grid-2-1fr">
+                            <div class="subgridDiv mb-3">
+                                <div class="nestSubInner-title text-uppercase mb-3">Holistic Wellness retreats</div>
+                                <div class="healthSubmenu d-grid">
+                                    <a href="#">All Health & Wellness Retreats</a>
+                                    <a href="#">Ayurveda Retreats</a>
+                                    <a href="#">Detox Retreats</a>
+                                    <a href="#">Weight Loss Retreats</a>
+                                    <a href="#">Spiritual Retreats</a>
+                                    <a href="#">Mental Health Retreats</a>
+                                </div>
+                            </div>
+
+                            <div class="subgridDiv">
+                                <div class="nestSubInner-title text-uppercase mb-3 d-grid">Meditation And Yoga Retreats
+                                </div>
+                                <div class="healthSubmenu d-grid">
+                                    <a href="#">All Meditation Retreats</a>
+                                    <a href="#">All Yoga Retreats</a>
+                                    <a href="#">Yoga & Meditation Retreats</a>
+                                    <a href="#">Mindfulness Retreats</a>
+                                    <a href="#">Silence Retreats</a>
+                                </div>
+                            </div>
+
+                            <div class="subgridDiv mb-3">
+                                <div class="nestSubInner-title text-uppercase mb-3">Fitness retreats</div>
+                                <div class="healthSubmenu d-grid">
+                                    <a href="#">All Fitness Retreats</a>
+                                    <a href="#">Bootcamps</a>
+                                    <a href="#">Pilates Retreats</a>
+                                </div>
+                            </div>
+                            <div class="subgridDiv">
+                                <div class="nestSubInner-title text-uppercase mb-3">Healing Retreats</div>
+                                <div class="healthSubmenu d-grid">
+                                    <a href="#">All Healing Retreats</a>
+                                    <a href="#">Emotional Healing Retreats</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="culinaryHolidays" class="nestedSubcontinent-menu ps-3 subtabcontent grid-2-1fr">
+                            <div class="subgridDiv mb-3">
+                                <div class="nestSubInner-title text-uppercase mb-3">Culinary Vacations</div>
+                                <div class="healthSubmenu d-grid">
+                                    <a href="#">All Culinary Holidays</a>
+                                    <a href="#">Vegan Culinary Holidays</a>
+                                    <a href="#">Budget Culinary Holidays</a>
+                                    <a href="#">All Inclusive Culinary Holidays</a>
+                                    <a href="#">Culinary Holidays for solo travelers</a>
+                                </div>
+                            </div>
+                            <div class="subgridDiv">
+                                <div class="nestSubInner-title text-uppercase mb-3">Cooking Vacations</div>
+                                <div class="healthSubmenu d-grid">
+                                    <a href="#">Cooking Holidays</a>
+                                    <a href="#">Pasta Holidays</a>
+                                    <a href="#">Pasta making Holidays</a>
+                                </div>
+                            </div>
+                            <div class="subgridDiv mb-3">
+                                <div class="nestSubInner-title text-uppercase mb-3">Tasting Vacations</div>
+                                <div class="healthSubmenu d-grid">
+                                    <a href="#">Food Tours</a>
+                                    <a href="#">Wine Tasting Holidays</a>
+                                    <a href="#">Raw Food Holidays</a>
+                                </div>
+                            </div>
+                            <div class="subgridDiv">
+                                <div class="nestSubInner-title text-uppercase mb-3">By Cuisine</div>
+                                <div class="healthSubmenu d-grid">
+                                    <a href="#">Italian Cuisines/a>
+                                        <a href="#">French Cuisines</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="martialArts" class="nestedSubcontinent-menu ps-3 subtabcontent grid-2-1fr">
+                            <div class="subgridDiv mb-3">
+                                <div class="nestSubInner-title text-uppercase mb-3">Martial Arts Holidays</div>
+                                <div class="healthSubmenu d-grid">
+                                    <a href="#">All Martial Arts Camps</a>
+                                    <a href="#">Firness & Martial Arts Camps</a>
+                                    <a href="#">Self Defence Camps</a>
+                                    <a href="#">Martial Arts Camps for Beginners</a>
+                                </div>
+                            </div>
+                            <div class="subgridDiv mb-3">
+
+                                <div class="nestSubInner-title text-uppercase mb-3">Martial Arts Styles</div>
+                                <div class="healthSubmenu d-grid">
+                                    <a href="#">Boxing</a>
+                                    <a href="#">Jiu Jitsu</a>
+                                    <a href="#">Kickboxing</a>
+                                    <a href="#">Krav Maga</a>
+                                    <a href="#">Kung Fu</a>
+                                    <a href="#">MMA</a>
+                                    <a href="#">Muay Thai</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 hw-bg">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 31 700">
+                            <path fill-rule="evenodd"
+                                d="M0 0h31C14 116.014169 5.5 232.419836 5.5 349.217002 5.5 466.014168 14 582.941834 31 700H0V0z"
+                                fill="#FFF"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="onlineExpSubMenu" class="mainContent tabcontent">
+            <div class="container-fluid no-box-shadow h-100">
+                <div class="row h-100 overflow-hidden">
+                    <div class="col-3 continent-menu d-flex flex-column" id="continentNestedSubMenu">
+                        <div class="nestSub-title text-uppercase mb-3 ps-3">Experiences</div>
+                        <button class="subTabLinks active defaultActive"
+                            onmouseover="openSubTopic(event, 'onlineOffering')" id="onof">Online Offerings</button>
+                    </div>
+                    <div class="col-5">
+                        <div id="onlineOffering"
+                            class="nestedSubcontinent-menu ps-3 subtabcontent defaultShow grid-2-1fr">
+                            <div class="subgridDiv mb-3">
+                                <div class="nestSubInner-title text-uppercase mb-3">Retreats and Courses</div>
+                                <div class="healthSubmenu d-grid">
+                                    <a href="#">Online Retreats</a>
+                                    <a href="#">Online Wellness Coaching Courses</a>
+                                    <a href="#">Online Meditation Courses</a>
+                                    <a href="#">Online Mindfulness Courses</a>
+                                </div>
+                            </div>
+                            <div class="subgridDiv mb-3">
+                                <div class="nestSubInner-title text-uppercase ps-3 mb-3">Private Sessions</div>
+                                <div class="healthSubmenu ps-3 d-grid">
+                                    <a href="#">Online Private Sessions</a>
+                                    <a href="#">Online Life Coaching Sessions</a>
+                                    <a href="#">Online Healing Sessions</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 oe-bg">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 31 700">
+                            <path fill-rule="evenodd"
+                                d="M0 0h31C14 116.014169 5.5 232.419836 5.5 349.217002 5.5 466.014168 14 582.941834 31 700H0V0z"
+                                fill="#FFF"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="bodyBG">
+            <div id="overlay" onmouseover="closeTopic()"></div>
+            <div id="favoriteContent" class="favorite-container container mt-4">
+                <div class="cardSection">
+                    <div class="gallery-photo">
+                        <div id="demo" class="carousel slide" data-interval="false">
+
+                            <!-- The slideshow/carousel -->
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="assets/banner1.jpg" alt="banner1" class="d-block w-100">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/banner2.jpg" alt="banner2" class="d-block w-100">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/banner3.jpg" alt="banner3" class="d-block w-100">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/banner4.jpg" alt="banner4" class="d-block w-100">
+                                </div>
+                            </div>
+
+                            <!-- Left and right controls/icons -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#demo"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#demo"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-content ">
+                        <div class="card-content-header">
+                            <div class="card-heading d-flex justify-content-between align-items-center mb-2">
+                                <div class="country-name">
+                                    <h6 id="favoriteTitle" class="text-uppercase">Italy</h6>
+                                </div>
+                                <div class="interest">
+                                    <i class="fa-solid fa-eye" style="color: #7c8086;"></i>
+                                    <span class="view">7 interested</span>
+                                    <i class="fa-solid fa-star" style="color: #02a5e8"></i>
+                                    <a>5 <span>(1)</span></a>
+                                </div>
+                            </div>
+                            <h4 id="favoriteDescription" class="card-desc">7 Day All-inclusive Italy Luxury Culinary
+                                Vacation in Beautiful Roman Countryside</h4>
+                            <p class="complimentary">All meals included</p>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between align-items-end">
+                            <div class="accomodation">
+                                <div class="users">
+                                    <i class="fa-solid fa-user-group" style="color: #7c8086;"></i>
+                                    <span>1 person</span>
+                                </div>
+                                <div class="calender">
+                                    <i class="fa-regular fa-calendar-days" style="color: #7c8086;"></i>
+                                    <span>7 days . Multiple starting dates</span>
+                                </div>
+                            </div>
+                            <div class="price">
+                                <span class="from-txt">From </span>
+                                <span class="price-tag">Rs. 371,922</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <script>
+            function updateDisplayedData() {
+                // Retrieve the data from local storage
+                const storedData = localStorage.getItem('favoriteData');
+
+                if (storedData) {
+                    // Parse the stored data into an object
+                    const data = JSON.parse(storedData);
+
+                    // Access the properties and render them in the HTML
+                    const title = data.title;
+                    const description = data.description;
+
+                    // Render the data in the HTML
+                    const titleElement = document.getElementById('favoriteTitle');
+                    const descriptionElement = document.getElementById('favoriteDescription');
+
+                    titleElement.textContent = title;
+                    descriptionElement.textContent = description;
+
+                    // Remove the data from local storage after rendering (optional)
+                    localStorage.removeItem('favoriteData');
+                }
+            }
+
+            // Check for changes in local storage when the page loads
+            window.onload = function () {
+                updateDisplayedData();
+            };
+
+            // Check for changes in local storage when the window receives the onstorage event
+            window.onstorage = function () {
+                updateDisplayedData();
+            };
+        </script>
+
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+            integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous">
+        </script>
+        <script src="js/index.js"></script>
+</body>
+
+</html>
